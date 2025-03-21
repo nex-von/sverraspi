@@ -39,7 +39,7 @@ def handle_client(secure_socket, client_address):
         secure_socket.close()
         print(f"Closed connection with {client_address}")
 
-def start_server(server_host='0.0.0.0', server_port=8443):
+def start_server(server_host='172.20.10.5', server_port=8443):
     context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
     context.load_cert_chain(certfile=os.path.join(CERTS_DIR, SERVER_CERT),
                             keyfile=os.path.join(CERTS_DIR, SERVER_KEY))

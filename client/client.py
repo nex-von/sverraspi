@@ -4,7 +4,7 @@ import os
 
 CERTS_DIR = "../certs"
 
-def echo_client(server_host='127.0.0.1', server_port=8443, certfile='server.crt'):
+def echo_client(server_host='172.20.10.5', server_port=8443, certfile='server.crt'):
     context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     context.load_verify_locations(os.path.join(CERTS_DIR, certfile))
     context.check_hostname = False
