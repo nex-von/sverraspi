@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BCM)
 LED_PIN = 17
 GPIO.setup(LED_PIN, GPIO.OUT)
 
-CERTS_DIR = "../certs"
+CERTS_DIR = "certs"
 SERVER_CERT = "server.crt"
 SERVER_KEY = "server.key"
 
